@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Habit Tracker</title>
+    <title>Dynamic Habit Tracker - Pixel Perfect</title>
     <style>
         * {
             margin: 0;
@@ -148,39 +148,22 @@
             letter-spacing: 2px;
         }
         
+        /* ---------------- FIXED ALIGNMENT CSS START ---------------- */
+        
         .days-label {
             background: #ecf0f1;
-            padding: 10px;
             text-align: center;
             font-size: 13px;
             border-bottom: 2px solid #bdc3c7;
             font-weight: 700;
             color: #34495e;
-        }
-        
-        .habit-input {
-            padding: 10px;
-            border-bottom: 1px solid #ecf0f1;
-            height: 40px;
-            transition: background 0.3s;
-        }
-        
-        .habit-input:hover {
-            background: #f8f9fa;
-        }
-        
-        .habit-input input {
-            width: 100%;
-            border: none;
-            font-size: 14px;
-            padding: 5px;
-            font-weight: 500;
-            color: #2c3e50;
-        }
-        
-        .habit-input input:focus {
-            outline: none;
-            font-weight: 600;
+            
+            /* Calculated Height: 35px (days) + 35px (dates) + 2px (border) = 72px */
+            height: 72px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
         }
         
         .week-column {
@@ -211,13 +194,20 @@
             font-size: 11px;
             border-bottom: 2px solid #bdc3c7;
             background: rgba(255,255,255,0.7);
+            
+            /* Fixed Height */
+            height: 35px;
         }
         
         .days-row div {
-            padding: 8px 2px;
             border-right: 1px solid #ddd;
             font-weight: 700;
             color: #34495e;
+            
+            /* Centering */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .date-row {
@@ -227,15 +217,52 @@
             font-size: 12px;
             border-bottom: 2px solid #bdc3c7;
             background: rgba(255,255,255,0.5);
+            
+            /* Fixed Height */
+            height: 35px;
         }
         
         .date-row div {
-            padding: 6px 2px;
             border-right: 1px solid #ddd;
             font-weight: 600;
             color: #2c3e50;
+            
+            /* Centering */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
+        /* ---------------- FIXED ALIGNMENT CSS END ---------------- */
+
+        .habit-input {
+            padding: 0 10px; /* Adjusted padding */
+            border-bottom: 1px solid #ecf0f1;
+            height: 40px;
+            transition: background 0.3s;
+            display: flex;
+            align-items: center;
+        }
+        
+        .habit-input:hover {
+            background: #f8f9fa;
+        }
+        
+        .habit-input input {
+            width: 100%;
+            border: none;
+            font-size: 14px;
+            padding: 5px;
+            font-weight: 500;
+            color: #2c3e50;
+            background: transparent;
+        }
+        
+        .habit-input input:focus {
+            outline: none;
+            font-weight: 600;
+        }
+
         .checkbox-row {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
@@ -250,7 +277,7 @@
         }
         
         .checkbox-row div {
-            padding: 10px 2px;
+            padding: 0;
             border-right: 1px solid #ddd;
             display: flex;
             align-items: center;
@@ -281,7 +308,6 @@
         }
         
         .progress-row {
-            padding: 10px;
             border-bottom: 1px solid #dee2e6;
             text-align: center;
             height: 40px;
@@ -536,7 +562,7 @@
         
         #heatmap {
             display: grid;
-            grid-template-columns: repeat(28, 1fr);
+            grid-template-columns: repeat(31, 1fr);
             gap: 5px;
             max-width: 100%;
         }
@@ -1156,4 +1182,5 @@
     </script>
 </body>
 </html>
+
 
