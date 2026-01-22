@@ -536,7 +536,7 @@
         
         #heatmap {
             display: grid;
-            grid-template-columns: repeat(31, 1fr);
+            grid-template-columns: repeat(28, 1fr);
             gap: 5px;
             max-width: 100%;
         }
@@ -614,7 +614,7 @@
             <div class="weeks-container">
                 <div class="habits-column">
                     <div class="habits-column-header">DAYS</div>
-                    <div class="days-label">31 / 31</div>
+                    <div class="days-label">28 / 28</div>
                     <div class="habit-input"><input type="text" placeholder="Habit 1" id="habit0"></div>
                     <div class="habit-input"><input type="text" placeholder="Habit 2" id="habit1"></div>
                     <div class="habit-input"><input type="text" placeholder="Habit 3" id="habit2"></div>
@@ -694,16 +694,16 @@
                 <div class="progress-column">
                     <div class="progress-header">PROGRESS</div>
                     <div class="days-label">COMPLETED</div>
-                    <div class="progress-row" id="progress0">0 / 31</div>
-                    <div class="progress-row" id="progress1">0 / 31</div>
-                    <div class="progress-row" id="progress2">0 / 31</div>
-                    <div class="progress-row" id="progress3">0 / 31</div>
-                    <div class="progress-row" id="progress4">0 / 31</div>
-                    <div class="progress-row" id="progress5">0 / 31</div>
-                    <div class="progress-row" id="progress6">0 / 31</div>
-                    <div class="progress-row" id="progress7">0 / 31</div>
-                    <div class="progress-row" id="progress8">0 / 31</div>
-                    <div class="progress-row" id="progress9">0 / 31</div>
+                    <div class="progress-row" id="progress0">0 / 28</div>
+                    <div class="progress-row" id="progress1">0 / 28</div>
+                    <div class="progress-row" id="progress2">0 / 28</div>
+                    <div class="progress-row" id="progress3">0 / 28</div>
+                    <div class="progress-row" id="progress4">0 / 28</div>
+                    <div class="progress-row" id="progress5">0 / 28</div>
+                    <div class="progress-row" id="progress6">0 / 28</div>
+                    <div class="progress-row" id="progress7">0 / 28</div>
+                    <div class="progress-row" id="progress8">0 / 28</div>
+                    <div class="progress-row" id="progress9">0 / 28</div>
                 </div>
             </div>
         </div>
@@ -830,7 +830,7 @@
             const progDiv = document.createElement('div');
             progDiv.className = 'progress-row';
             progDiv.id = `progress${habitIndex}`;
-            progDiv.textContent = '0 / 31';
+            progDiv.textContent = '0 / 28';
             progressCol.appendChild(progDiv);
             
             // 4. Update Everything
@@ -862,7 +862,7 @@
                 
                 const progressEl = document.getElementById(`progress${i}`);
                 if(progressEl) {
-                    progressEl.textContent = `${completed} / 31`;
+                    progressEl.textContent = `${completed} / 28`;
                 }
             }
         }
@@ -892,7 +892,7 @@
             let maxStreak = 0;
             let currentStreak = 0;
             
-            for (let day = 0; day < 31; day++) {
+            for (let day = 0; day < 28; day++) {
                 let dayComplete = true;
                 // Check all habits for this specific day across weeks
                 for (let habit = 0; habit < totalHabits; habit++) {
@@ -1035,7 +1035,7 @@
                         if (cb.checked) completed++;
                     });
                 });
-                const percentage = Math.round((completed / 31) * 100);
+                const percentage = Math.round((completed / 28) * 100);
                 habitData.push(percentage);
             }
             
@@ -1080,7 +1080,7 @@
             heatmap.innerHTML = '';
             const totalHabits = document.querySelectorAll('.habit-input').length;
             
-            for (let day = 1; day <= 31; day++) {
+            for (let day = 1; day <= 28; day++) {
                 let completed = 0;
                 let total = 0;
                 
@@ -1156,3 +1156,4 @@
     </script>
 </body>
 </html>
+
