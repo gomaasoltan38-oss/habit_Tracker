@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Habit Tracker</title>
+    <title>Dynamic Habit Tracker</title>
     <style>
         * {
             margin: 0;
@@ -112,7 +112,7 @@
         
         .habits-section {
             border: 3px solid #2c3e50;
-            margin-bottom: 25px;
+            margin-bottom: 10px;
             overflow-x: auto;
             border-radius: 8px;
         }
@@ -293,6 +293,20 @@
             color: #2c3e50;
         }
         
+        /* New Add Button Styling */
+        .add-habit-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+
+        .btn-add {
+            background: linear-gradient(135deg, #f39c12 0%, #d35400 100%);
+            color: white;
+            padding: 12px 30px;
+            font-size: 14px;
+        }
+
         .weekly-section {
             display: grid;
             grid-template-columns: 1.2fr 4fr 1.5fr;
@@ -481,7 +495,7 @@
                 padding: 0;
                 background: white;
             }
-            .buttons {
+            .buttons, .add-habit-container {
                 display: none;
             }
         }
@@ -615,12 +629,8 @@
                 
                 <div class="week-column week-1">
                     <div class="week-header">WEEK 1</div>
-                    <div class="days-row">
-                        <div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div><div>S</div>
-                    </div>
-                    <div class="date-row">
-                        <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div>
-                    </div>
+                    <div class="days-row"><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div><div>S</div></div>
+                    <div class="date-row"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div></div>
                     <div class="checkbox-row" data-habit="0"><div><input type="checkbox" data-week="1"></div><div><input type="checkbox" data-week="1"></div><div><input type="checkbox" data-week="1"></div><div><input type="checkbox" data-week="1"></div><div><input type="checkbox" data-week="1"></div><div><input type="checkbox" data-week="1"></div><div><input type="checkbox" data-week="1"></div></div>
                     <div class="checkbox-row" data-habit="1"><div><input type="checkbox" data-week="1"></div><div><input type="checkbox" data-week="1"></div><div><input type="checkbox" data-week="1"></div><div><input type="checkbox" data-week="1"></div><div><input type="checkbox" data-week="1"></div><div><input type="checkbox" data-week="1"></div><div><input type="checkbox" data-week="1"></div></div>
                     <div class="checkbox-row" data-habit="2"><div><input type="checkbox" data-week="1"></div><div><input type="checkbox" data-week="1"></div><div><input type="checkbox" data-week="1"></div><div><input type="checkbox" data-week="1"></div><div><input type="checkbox" data-week="1"></div><div><input type="checkbox" data-week="1"></div><div><input type="checkbox" data-week="1"></div></div>
@@ -635,12 +645,8 @@
                 
                 <div class="week-column week-2">
                     <div class="week-header">WEEK 2</div>
-                    <div class="days-row">
-                        <div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div><div>S</div>
-                    </div>
-                    <div class="date-row">
-                        <div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div>
-                    </div>
+                    <div class="days-row"><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div><div>S</div></div>
+                    <div class="date-row"><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div></div>
                     <div class="checkbox-row" data-habit="0"><div><input type="checkbox" data-week="2"></div><div><input type="checkbox" data-week="2"></div><div><input type="checkbox" data-week="2"></div><div><input type="checkbox" data-week="2"></div><div><input type="checkbox" data-week="2"></div><div><input type="checkbox" data-week="2"></div><div><input type="checkbox" data-week="2"></div></div>
                     <div class="checkbox-row" data-habit="1"><div><input type="checkbox" data-week="2"></div><div><input type="checkbox" data-week="2"></div><div><input type="checkbox" data-week="2"></div><div><input type="checkbox" data-week="2"></div><div><input type="checkbox" data-week="2"></div><div><input type="checkbox" data-week="2"></div><div><input type="checkbox" data-week="2"></div></div>
                     <div class="checkbox-row" data-habit="2"><div><input type="checkbox" data-week="2"></div><div><input type="checkbox" data-week="2"></div><div><input type="checkbox" data-week="2"></div><div><input type="checkbox" data-week="2"></div><div><input type="checkbox" data-week="2"></div><div><input type="checkbox" data-week="2"></div><div><input type="checkbox" data-week="2"></div></div>
@@ -655,12 +661,8 @@
                 
                 <div class="week-column week-3">
                     <div class="week-header">WEEK 3</div>
-                    <div class="days-row">
-                        <div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div><div>S</div>
-                    </div>
-                    <div class="date-row">
-                        <div>15</div><div>16</div><div>17</div><div>18</div><div>19</div><div>20</div><div>21</div>
-                    </div>
+                    <div class="days-row"><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div><div>S</div></div>
+                    <div class="date-row"><div>15</div><div>16</div><div>17</div><div>18</div><div>19</div><div>20</div><div>21</div></div>
                     <div class="checkbox-row" data-habit="0"><div><input type="checkbox" data-week="3"></div><div><input type="checkbox" data-week="3"></div><div><input type="checkbox" data-week="3"></div><div><input type="checkbox" data-week="3"></div><div><input type="checkbox" data-week="3"></div><div><input type="checkbox" data-week="3"></div><div><input type="checkbox" data-week="3"></div></div>
                     <div class="checkbox-row" data-habit="1"><div><input type="checkbox" data-week="3"></div><div><input type="checkbox" data-week="3"></div><div><input type="checkbox" data-week="3"></div><div><input type="checkbox" data-week="3"></div><div><input type="checkbox" data-week="3"></div><div><input type="checkbox" data-week="3"></div><div><input type="checkbox" data-week="3"></div></div>
                     <div class="checkbox-row" data-habit="2"><div><input type="checkbox" data-week="3"></div><div><input type="checkbox" data-week="3"></div><div><input type="checkbox" data-week="3"></div><div><input type="checkbox" data-week="3"></div><div><input type="checkbox" data-week="3"></div><div><input type="checkbox" data-week="3"></div><div><input type="checkbox" data-week="3"></div></div>
@@ -675,12 +677,8 @@
                 
                 <div class="week-column week-4">
                     <div class="week-header">WEEK 4</div>
-                    <div class="days-row">
-                        <div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div><div>S</div>
-                    </div>
-                    <div class="date-row">
-                        <div>22</div><div>23</div><div>24</div><div>25</div><div>26</div><div>27</div><div>28</div>
-                    </div>
+                    <div class="days-row"><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div><div>S</div></div>
+                    <div class="date-row"><div>22</div><div>23</div><div>24</div><div>25</div><div>26</div><div>27</div><div>28</div></div>
                     <div class="checkbox-row" data-habit="0"><div><input type="checkbox" data-week="4"></div><div><input type="checkbox" data-week="4"></div><div><input type="checkbox" data-week="4"></div><div><input type="checkbox" data-week="4"></div><div><input type="checkbox" data-week="4"></div><div><input type="checkbox" data-week="4"></div><div><input type="checkbox" data-week="4"></div></div>
                     <div class="checkbox-row" data-habit="1"><div><input type="checkbox" data-week="4"></div><div><input type="checkbox" data-week="4"></div><div><input type="checkbox" data-week="4"></div><div><input type="checkbox" data-week="4"></div><div><input type="checkbox" data-week="4"></div><div><input type="checkbox" data-week="4"></div><div><input type="checkbox" data-week="4"></div></div>
                     <div class="checkbox-row" data-habit="2"><div><input type="checkbox" data-week="4"></div><div><input type="checkbox" data-week="4"></div><div><input type="checkbox" data-week="4"></div><div><input type="checkbox" data-week="4"></div><div><input type="checkbox" data-week="4"></div><div><input type="checkbox" data-week="4"></div><div><input type="checkbox" data-week="4"></div></div>
@@ -710,6 +708,10 @@
             </div>
         </div>
         
+        <div class="add-habit-container">
+            <button class="btn-add" onclick="addHabit()">➕ Add New Habit</button>
+        </div>
+
         <div class="weekly-section">
             <div class="weekly-progress">
                 <h3>WEEKLY PROGRESS</h3>
@@ -768,7 +770,6 @@
             <button class="btn-save" onclick="saveTracker()">💾 Save Data</button>
         </div>
         
-        <!-- Charts Section -->
         <div class="charts-section">
             <div class="chart-container">
                 <h3>📊 Weekly Performance Chart</h3>
@@ -793,6 +794,49 @@
             checkbox.addEventListener('change', updateAllProgress);
         });
         
+        function addHabit() {
+            // Calculate new index
+            const habitIndex = document.querySelectorAll('.habit-input').length;
+            
+            // 1. Add Input to Habits Column
+            const habitsCol = document.querySelector('.habits-column');
+            const inputDiv = document.createElement('div');
+            inputDiv.className = 'habit-input';
+            inputDiv.innerHTML = `<input type="text" placeholder="Habit ${habitIndex + 1}" id="habit${habitIndex}">`;
+            habitsCol.appendChild(inputDiv);
+            
+            // 2. Add Checkboxes for Weeks 1-4
+            for(let w=1; w<=4; w++) {
+                const weekCol = document.querySelector(`.week-column.week-${w}`);
+                const row = document.createElement('div');
+                row.className = 'checkbox-row';
+                row.dataset.habit = habitIndex;
+                
+                let html = '';
+                for(let d=0; d<7; d++) {
+                    html += `<div><input type="checkbox" data-week="${w}"></div>`;
+                }
+                row.innerHTML = html;
+                weekCol.appendChild(row);
+                
+                // Attach event listener to new checkboxes
+                row.querySelectorAll('input').forEach(cb => {
+                    cb.addEventListener('change', updateAllProgress);
+                });
+            }
+            
+            // 3. Add Progress Row
+            const progressCol = document.querySelector('.progress-column');
+            const progDiv = document.createElement('div');
+            progDiv.className = 'progress-row';
+            progDiv.id = `progress${habitIndex}`;
+            progDiv.textContent = '0 / 31';
+            progressCol.appendChild(progDiv);
+            
+            // 4. Update Everything
+            updateAllProgress();
+        }
+
         function updateAllProgress() {
             updateHabitProgress();
             updateWeeklyStats();
@@ -803,7 +847,9 @@
         }
         
         function updateHabitProgress() {
-            for (let i = 0; i < 10; i++) {
+            const totalHabits = document.querySelectorAll('.habit-input').length;
+            
+            for (let i = 0; i < totalHabits; i++) {
                 const rows = document.querySelectorAll(`.checkbox-row[data-habit="${i}"]`);
                 let completed = 0;
                 
@@ -814,7 +860,10 @@
                     });
                 });
                 
-                document.getElementById(`progress${i}`).textContent = `${completed} / 31`;
+                const progressEl = document.getElementById(`progress${i}`);
+                if(progressEl) {
+                    progressEl.textContent = `${completed} / 31`;
+                }
             }
         }
         
@@ -837,18 +886,29 @@
         }
         
         function calculateBestStreak() {
+            const totalHabits = document.querySelectorAll('.habit-input').length;
+            if(totalHabits === 0) return 0;
+
             let maxStreak = 0;
             let currentStreak = 0;
             
             for (let day = 0; day < 31; day++) {
                 let dayComplete = true;
-                for (let habit = 0; habit < 10; habit++) {
+                // Check all habits for this specific day across weeks
+                for (let habit = 0; habit < totalHabits; habit++) {
                     const rows = document.querySelectorAll(`.checkbox-row[data-habit="${habit}"]`);
                     let checkbox = null;
+                    
+                    // Flatten rows to find the specific day index (0-30)
+                    const allHabitCheckboxes = [];
                     rows.forEach(row => {
-                        const cbs = Array.from(row.querySelectorAll('input[type="checkbox"]'));
-                        if (day < cbs.length) checkbox = cbs[day % 7];
+                        row.querySelectorAll('input[type="checkbox"]').forEach(cb => allHabitCheckboxes.push(cb));
                     });
+                    
+                    if (day < allHabitCheckboxes.length) {
+                        checkbox = allHabitCheckboxes[day];
+                    }
+
                     if (!checkbox || !checkbox.checked) {
                         dayComplete = false;
                         break;
@@ -922,27 +982,22 @@
             }
             
             weeklyChart = new Chart(ctx, {
-                type: 'bar',
+                type: 'line',
                 data: {
                     labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5'],
                     datasets: [{
                         label: 'Completion %',
                         data: weekData,
-                        backgroundColor: [
-                            'rgba(52, 152, 219, 0.8)',
-                            'rgba(46, 204, 113, 0.8)',
-                            'rgba(233, 30, 99, 0.8)',
-                            'rgba(243, 156, 18, 0.8)',
-                            'rgba(155, 89, 182, 0.8)'
-                        ],
-                        borderColor: [
-                            'rgba(52, 152, 219, 1)',
-                            'rgba(46, 204, 113, 1)',
-                            'rgba(233, 30, 99, 1)',
-                            'rgba(243, 156, 18, 1)',
-                            'rgba(155, 89, 182, 1)'
-                        ],
-                        borderWidth: 3
+                        backgroundColor: 'rgba(52, 152, 219, 0.1)',
+                        borderColor: 'rgba(52, 152, 219, 1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.4,
+                        pointRadius: 6,
+                        pointHoverRadius: 8,
+                        pointBackgroundColor: 'rgba(52, 152, 219, 1)',
+                        pointBorderColor: '#fff',
+                        pointBorderWidth: 2
                     }]
                 },
                 options: {
@@ -952,9 +1007,7 @@
                         y: {
                             beginAtZero: true,
                             max: 100,
-                            ticks: {
-                                callback: function(value) { return value + '%'; }
-                            }
+                            ticks: { callback: function(value) { return value + '%'; } }
                         }
                     },
                     plugins: {
@@ -967,10 +1020,13 @@
         function updateHabitsChart() {
             const habitData = [];
             const habitLabels = [];
+            const totalHabits = document.querySelectorAll('.habit-input').length;
             
-            for (let i = 0; i < 10; i++) {
-                const habitName = document.getElementById(`habit${i}`).value || `Habit ${i + 1}`;
-                habitLabels.push(habitName);
+            for (let i = 0; i < totalHabits; i++) {
+                const inputEl = document.getElementById(`habit${i}`);
+                const habitName = inputEl ? inputEl.value : `Habit ${i + 1}`;
+                const nameToUse = habitName || `Habit ${i + 1}`;
+                habitLabels.push(nameToUse);
                 
                 const rows = document.querySelectorAll(`.checkbox-row[data-habit="${i}"]`);
                 let completed = 0;
@@ -989,16 +1045,19 @@
                 habitsChart.destroy();
             }
             
+            // Generate dynamic colors if habits > 10
+            const baseColors = ['#3498db', '#2ecc71', '#e91e63', '#f39c12', '#9b59b6', '#1abc9c', '#e74c3c', '#34495e', '#16a085', '#d35400'];
+            while (baseColors.length < totalHabits) {
+                baseColors.push('#' + Math.floor(Math.random()*16777215).toString(16));
+            }
+
             habitsChart = new Chart(ctx, {
                 type: 'doughnut',
                 data: {
                     labels: habitLabels,
                     datasets: [{
                         data: habitData,
-                        backgroundColor: [
-                            '#3498db', '#2ecc71', '#e91e63', '#f39c12', '#9b59b6',
-                            '#1abc9c', '#e74c3c', '#34495e', '#16a085', '#d35400'
-                        ],
+                        backgroundColor: baseColors.slice(0, totalHabits),
                         borderWidth: 3,
                         borderColor: '#fff'
                     }]
@@ -1009,10 +1068,7 @@
                     plugins: {
                         legend: {
                             position: 'right',
-                            labels: {
-                                font: { size: 11, weight: 'bold' },
-                                padding: 10
-                            }
+                            labels: { font: { size: 11, weight: 'bold' }, padding: 10 }
                         }
                     }
                 }
@@ -1022,21 +1078,25 @@
         function updateHeatmap() {
             const heatmap = document.getElementById('heatmap');
             heatmap.innerHTML = '';
+            const totalHabits = document.querySelectorAll('.habit-input').length;
             
             for (let day = 1; day <= 31; day++) {
                 let completed = 0;
                 let total = 0;
                 
-                for (let habit = 0; habit < 10; habit++) {
+                for (let habit = 0; habit < totalHabits; habit++) {
                     const rows = document.querySelectorAll(`.checkbox-row[data-habit="${habit}"]`);
-                    rows.forEach((row, weekIndex) => {
-                        const checkboxes = Array.from(row.querySelectorAll('input[type="checkbox"]'));
-                        const dayIndex = (day - 1) - (weekIndex * 7);
-                        if (dayIndex >= 0 && dayIndex < checkboxes.length) {
-                            total++;
-                            if (checkboxes[dayIndex].checked) completed++;
-                        }
+                    // Create a flat array of checkboxes for this habit across weeks
+                    const checkboxes = [];
+                    rows.forEach(row => {
+                        row.querySelectorAll('input[type="checkbox"]').forEach(cb => checkboxes.push(cb));
                     });
+
+                    // Map day to checkbox index
+                    if ((day - 1) < checkboxes.length) {
+                        total++;
+                        if (checkboxes[day - 1].checked) completed++;
+                    }
                 }
                 
                 const intensity = total > 0 ? Math.floor((completed / total) * 4) : 0;
@@ -1067,8 +1127,11 @@
                 notes: document.getElementById('notesArea').value
             };
             
-            for (let i = 0; i < 10; i++) {
-                data.habits.push(document.getElementById(`habit${i}`).value);
+            const totalHabits = document.querySelectorAll('.habit-input').length;
+            
+            for (let i = 0; i < totalHabits; i++) {
+                const input = document.getElementById(`habit${i}`);
+                data.habits.push(input ? input.value : '');
             }
             
             document.querySelectorAll('input[type="checkbox"]').forEach((cb, index) => {
@@ -1090,90 +1153,6 @@
         window.addEventListener('load', () => {
             updateAllProgress();
         });
-         function updateWeeklyChart() {
-            const weekData = [];
-            for (let week = 1; week <= 5; week++) {
-                const weekCheckboxes = document.querySelectorAll(`input[data-week="${week}"]`);
-                let completed = 0;
-                weekCheckboxes.forEach(cb => { if (cb.checked) completed++; });
-                const total = weekCheckboxes.length;
-                const percentage = total > 0 ? Math.round((completed / total) * 100) : 0;
-                weekData.push(percentage);
-            }
-            
-            const ctx = document.getElementById('weeklyChart').getContext('2d');
-            
-            if (weeklyChart) {
-                weeklyChart.destroy();
-            }
-            
-            weeklyChart = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5'],
-                    datasets: [{
-                        label: 'Completion %',
-                        data: weekData,
-                        backgroundColor: 'rgba(52, 152, 219, 0.1)',
-                        borderColor: 'rgba(52, 152, 219, 1)',
-                        borderWidth: 3,
-                        fill: true,
-                        tension: 0.4,
-                        pointRadius: 6,
-                        pointHoverRadius: 8,
-                        pointBackgroundColor: 'rgba(52, 152, 219, 1)',
-                        pointBorderColor: '#fff',
-                        pointBorderWidth: 2,
-                        pointHoverBackgroundColor: '#fff',
-                        pointHoverBorderColor: 'rgba(52, 152, 219, 1)',
-                        pointHoverBorderWidth: 3
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: true,
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            max: 100,
-                            grid: {
-                                color: 'rgba(0, 0, 0, 0.05)',
-                                drawBorder: false
-                            },
-                            ticks: {
-                                callback: function(value) { return value + '%'; },
-                                font: { size: 12, weight: 'bold' }
-                            }
-                        },
-                        x: {
-                            grid: {
-                                display: false
-                            },
-                            ticks: {
-                                font: { size: 12, weight: 'bold' }
-                            }
-                        }
-                    },
-                    plugins: {
-                        legend: { 
-                            display: false 
-                        },
-                        tooltip: {
-                            backgroundColor: 'rgba(0, 0, 0, 0.8)',
-                            padding: 12,
-                            titleFont: { size: 14, weight: 'bold' },
-                            bodyFont: { size: 13 },
-                            callbacks: {
-                                label: function(context) {
-                                    return 'Completion: ' + context.parsed.y + '%';
-                                }
-                            }
-                        }
-                    }
-                }
-            });
-        }
     </script>
-    
 </body>
-</html
+</html>
